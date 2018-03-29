@@ -1,0 +1,43 @@
+#shortcut-bar {
+	padding: 0;
+	margin: 0 0 15px 0;
+
+	li {
+		display: inline-block;
+		margin-right: 5px;
+
+		a {
+			font-family: $font__sec;
+			font-size: 10px;
+
+			span {
+				display: inline-block;
+				padding: 0 2px;
+				line-height: 12px;
+				background: $theme-green__color-tertiary;
+				color: $theme-green__color-primary;
+
+				body.yellow-theme & {
+					background: $theme-yellow__link-color;
+					color: $theme-yellow__color-primary;
+				}
+
+				body.blue-theme & {
+					background: $theme-blue__color-secondary;
+					color: $theme-blue__link-alt-color;
+				}
+
+				body.white-theme & {
+					background: $theme-white__link-color;
+					color: $theme-blue__link-alt-color;
+				}
+
+				body.high-contrast & {
+					background: #fff;
+					color: #000;
+				}
+			}
+		}
+	}
+
+}

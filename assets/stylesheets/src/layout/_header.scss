@@ -1,0 +1,145 @@
+@import "elements/barra-brasil";
+
+header {
+
+	&.site-header {
+
+		color: $theme-green__text-on-dark-bg-color;
+		background-color: $theme-green__color-gradient-start;
+		position: relative;
+		@include gradient-vertical($theme-green__color-gradient-start, $theme-green__color-gradient-end);
+
+		body.yellow-theme & {
+			color: $theme-yellow__text-on-dark-bg-color;
+			background-color: $theme-yellow__color-gradient-start;
+			position: relative;
+			@include gradient-vertical($theme-yellow__color-gradient-start, $theme-yellow__color-gradient-end);
+		}
+
+		body.blue-theme & {
+			color: $theme-blue__text-on-dark-bg-color;
+			background-color: $theme-blue__color-gradient-start;
+			position: relative;
+			@include gradient-vertical($theme-blue__color-gradient-start, $theme-blue__color-gradient-end);
+		}
+
+		body.white-theme & {
+			color: $theme-white__link-color;
+			background-color: $theme-white__color-gradient-start;
+			position: relative;
+			@include gradient-vertical($theme-white__color-gradient-start, $theme-white__color-gradient-end);
+		}
+
+		body.high-contrast & {
+			color: #fff;
+			background: #000;
+			position: relative;
+		}
+
+		a {
+			color: $theme-green__link-alt-color;
+
+			body.yellow-theme & {
+				color: $theme-yellow__link-alt-color;
+			}
+
+			body.blue-theme & {
+				color: $theme-blue__link-alt-color;
+			}
+
+			body.white-theme & {
+				color: $theme-white__link-color;
+			}
+
+			body.high-contrast & {
+				color: #fff;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		& > div.container {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			position: relative;
+			z-index: 1;
+		}
+
+		.denomination {
+			font-size: 12px;
+		}
+
+		.site-title {
+			font-size: 40px;
+			line-height: 40px;
+			letter-spacing: -2px;
+		}
+
+		.site-description {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+
+		.service-bar-container {
+			background: $theme-green__color-secondary;
+
+			body.yellow-theme & {
+				background: $theme-yellow__color-secondary;
+			}
+
+			body.blue-theme & {
+				background: $theme-blue__color-secondary;
+			}
+
+			body.white-theme & {
+				background: $theme-white__color-secondary;
+			}
+
+			body.high-contrast & {
+				background: #000;
+			}
+
+			.navbar {
+				padding: 0;
+				text-align: right;
+			}
+
+			@import "elements/service-bar";
+
+		}
+
+		@import "elements/main-search";
+		@import "elements/social-media-links";
+
+		.custom-header-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			margin: auto;
+			width: 100%;
+			z-index: 0;
+		}
+
+
+		@include media-breakpoint-down(sm) {
+			.cf-1 {
+				// order: 2;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.cf-2 {
+				// order: 1;
+				text-align: center;
+			}
+
+			.navbar-toggler {
+				border: none;
+			}
+		}
+
+	}
+
+}
